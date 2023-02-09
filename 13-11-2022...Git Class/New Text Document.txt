@@ -1,0 +1,166 @@
+Microsoft Windows [Version 10.0.22621.819]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\React-Apps\react-routing-app>code .
+
+D:\React-Apps\react-routing-app>cd ..
+
+D:\React-Apps>dir
+ Volume in drive D is DATA
+ Volume Serial Number is C42D-9FE4
+
+ Directory of D:\React-Apps
+
+26-11-2022  18:05    <DIR>          .
+26-11-2022  18:06    <DIR>          react-routing-app
+               0 File(s)              0 bytes
+               2 Dir(s)  231,269,740,544 bytes free
+
+D:\React-Apps>cd ..
+
+D:\>dir
+ Volume in drive D is DATA
+ Volume Serial Number is C42D-9FE4
+
+ Directory of D:\
+
+08-11-2022  06:39    <DIR>          Baabtra React Course
+07-11-2022  23:47    <DIR>          Content Preparation13-11-2022  12:18    <DIR>          counter
+26-11-2022  20:59    <DIR>          HTML form data Node.JS
+13-11-2022  17:23    <DIR>          learn
+19-07-2022  10:06               152 Microsoft Login Credentials.txt
+26-11-2022  21:01    <DIR>          Node
+08-11-2022  15:16    <DIR>          nvm-setup (1)
+18-10-2022  14:23    <DIR>          React
+04-11-2022  13:01    <DIR>          React - Copy
+26-11-2022  18:05    <DIR>          React-Apps
+27-11-2022  21:17    <DIR>          react-routing-app
+26-11-2022  19:25    <DIR>          typescript-app
+               1 File(s)            152 bytes
+              12 Dir(s)  231,269,740,544 bytes free
+
+D:\>cd typescript-app
+
+D:\typescript-app>dir
+ Volume in drive D is DATA
+ Volume Serial Number is C42D-9FE4
+
+ Directory of D:\typescript-app
+
+26-11-2022  19:25    <DIR>          .
+26-11-2022  19:30    <DIR>          react-ts
+               0 File(s)              0 bytes
+               2 Dir(s)  231,269,740,544 bytes free
+
+D:\typescript-app>cd react-ts
+
+D:\typescript-app\react-ts>dir
+ Volume in drive D is DATA
+ Volume Serial Number is C42D-9FE4
+
+ Directory of D:\typescript-app\react-ts
+
+26-11-2022  19:30    <DIR>          .
+26-11-2022  19:25    <DIR>          ..
+26-11-2022  19:27               310 .gitignore
+26-11-2022  19:31    <DIR>          node_modules
+26-11-2022  19:31         1,181,129 package-lock.json
+26-11-2022  19:31               967 package.json
+26-11-2022  19:29    <DIR>          public
+26-11-2022  19:28             2,117 README.md
+26-11-2022  19:30    <DIR>          src
+26-11-2022  19:30               561 tsconfig.json
+               5 File(s)      1,185,084 bytes
+               5 Dir(s)  231,269,740,544 bytes free
+
+D:\typescript-app\react-ts>code .
+
+D:\typescript-app\react-ts>git init
+Reinitialized existing Git repository in D:/typescript-app/react-ts/.git/
+
+D:\typescript-app\react-ts>git add .
+
+D:\typescript-app\react-ts>git commit -am "Fix : add new file "
+On branch master
+nothing to commit, working tree clean
+
+D:\typescript-app\react-ts>git remote add origin git@github.com:amjdp/react-routing.git
+
+D:\typescript-app\react-ts>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\typescript-app\react-ts>git fetch --all
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+
+D:\typescript-app\react-ts>git branch --all
+* master
+
+D:\typescript-app\react-ts>git remote -v
+origin  git@github.com:amjdp/react-routing.git (fetch)
+origin  git@github.com:amjdp/react-routing.git (push)
+
+D:\typescript-app\react-ts>git push origin master
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (24/24), 302.58 KiB | 2.26 MiB/s, done.
+Total 24 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:amjdp/react-routing.git
+ * [new branch]      master -> master
+
+D:\typescript-app\react-ts>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/App.tsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\typescript-app\react-ts>cd ../..
+
+D:\>cd React-Apps
+
+D:\React-Apps>cd react-routing-app
+
+D:\React-Apps\react-routing-app>cd react-routing-app
+
+D:\React-Apps\react-routing-app\react-routing-app>dir
+ Volume in drive D is DATA
+ Volume Serial Number is C42D-9FE4
+
+ Directory of D:\React-Apps\react-routing-app\react-routing-app
+
+27-11-2022  22:17    <DIR>          .
+26-11-2022  18:06    <DIR>          ..
+27-11-2022  21:37    <DIR>          .firebase
+27-11-2022  21:36                62 .firebaserc
+26-11-2022  18:08               310 .gitignore
+27-11-2022  22:18                23 .npmrc
+27-11-2022  21:39    <DIR>          build
+27-11-2022  21:36               235 firebase.json
+26-11-2022  19:08    <DIR>          node_modules
+26-11-2022  19:08         1,337,514 package-lock.json
+26-11-2022  19:08             1,014 package.json
+26-11-2022  18:09    <DIR>          public
+26-11-2022  18:08             3,359 README.md
+26-11-2022  18:09    <DIR>          src
+               7 File(s)      1,342,517 bytes
+               7 Dir(s)  232,885,448,704 bytes free
+
+D:\React-Apps\react-routing-app\react-routing-app>git add .
+warning: in the working copy of '.firebase/hosting.YnVpbGQ.cache', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.firebaserc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'firebase.json', LF will be replaced by CRLF the next time Git touches it
+
+D:\React-Apps\react-routing-app\react-routing-app>git init
+Reinitialized existing Git repository in D:/React-Apps/react-routing-app/react-routing-app/.git/
+
+D:\React-Apps\react-routing-app\react-routing-app>
+
+
+
+

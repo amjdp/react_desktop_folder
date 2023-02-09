@@ -1,0 +1,92 @@
+  var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
+            if (!regName.test(s_name)) {
+                alert('Please enter your full name ');
+                document.getElementById('name').focus();
+                return false;
+            } else {
+                alert('Valid name given.');
+                return true;
+            }
+
+
+'infofile': {
+            'level': 'INFO',
+            'class':'logging.FileHandler',
+            'filename':BASE_DIR/'logs/info.log',
+            'formatter':'simpleRe',
+        },
+
+'Loggers': {
+        'django': {
+            'handlers': ['file','infofile'],
+            'level': 'DEBUG',
+            'propagate': True,
+            'level': os.getenv('DJANGO_LOG_LEVEL','DEBUG')            
+        },
+    },
+
+        },
+    },
+ 
+    'formatters' : {
+        'simpleRe': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+
+
+import logging.handlers
+
+,HttpResponse
+
+
+from django.http import HttpResponse
+import logging.handlers
+import logging 
+
+# Create your views here.
+
+
+logger = logging.getLogger('django')
+
+
+
+# def signup(request):
+#     logger.info("this is info message")
+#     return HttpResponse("info")
+
+
+
+https://github.com/cybersquare/Learn-git
+
+Collaboration is the way different people can work on the same project together.
+Each person in a group will be developing different features by creating a branch
+After completing the feature it is merged with the main branch
+Branches can be accessed only on individual systems.
+Other group members don't have the access to the branch
+
+
+Username: athira@baabte.com
+Password: CgL%&5SEDFUF4jM&
+baabtra123
+amjdp@27
+
+A fork creates a completely independent copy of Git repository. In contrast to a fork, a Git clone creates a linked copy that will continue to synchronize with the target repository.
+
+Forking is done on the GitHub Account while Cloning is done using Git. When you fork a repository, you create a copy of the original repository (upstream repository) but the repository remains on your GitHub account. Whereas, when you clone a repository, the repository is copied on to your local machine with the help of Git.
+
+
+Changes made to the forked repository can be merged with the original repository via a pull request. 
+
+
+Ask for the username of the person you're inviting as a collaborator.
+
+On your GitHub Enterprise Server instance, navigate to the main page of the repository.
+
+Under your repository name, click  Settings.
+In the left sidebar, click Collaborators.
+
+Under "Collaborators", start typing the collaborator's username.
+
+Select the collaborator's username from the drop-down menu.
+Click Add collaborator.

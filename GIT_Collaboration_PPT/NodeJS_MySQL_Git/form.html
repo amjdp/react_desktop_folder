@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+
+    <style>
+        .user-detail{
+            text-align : center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+        }
+        button{
+            height: 40px;
+            width: 150px;
+            font-size: 30px;
+        }
+    </style>
+
+
+</head>
+<body>
+   
+    <!--====form section start====-->
+    <div class="user-detail">
+        <h1 id="heading">Create User Data</h1>
+        <form action="/users/create" method="POST">
+              <label>Full Name : </label>
+              <input type="text" placeholder="Enter Full Name" name="fullName" required> <br><br>
+              <label>Email Address : </label>
+              <input type="email" placeholder="Enter Email Address" name="emailAddress" required> <br><br>
+              <label>City : </label>
+              <input type="city" placeholder="Enter City" name="city" required> <br><br>
+              <label>Country : </label>
+              <input type="text" placeholder="Enter Country" name="country" required> <br><br>
+              <label>Contact Number : </label>
+              <input type="number" placeholder="Enter Contact Number" name="contactNo" required> <br><br><br>
+              <button type="submit">Submit</button> <br><br><br>
+
+              <span id="update_msg"></span>  <button type="button">View</button>
+
+            </div>
+    </div>
+    <!--====form section start====-->
+ 
+</body>
+</html>

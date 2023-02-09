@@ -1,0 +1,188 @@
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/.ssh
+$ cat
+
+
+
+
+
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/.ssh
+$ ^C
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/.ssh
+$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDI+zRLwWO7dM2XXPNkdbcYEOzFMkbkYogMWgLipPPz55k3QlS0u1kmM6xiqGJXi13yPoRJMw26tfM74i3Ql10EiGTukXRhKLzd5K9xs69EfVScTeqcTwfEFHKHgEv1fmwlV7tj1vWrWz4in8Toyzz7PJIwgrmifHMHHSZlco7N7TnsrbITADa6iXweyjK7rZGKUCMjeDlF0u8Hs2SC363ABFbizWn8nN0vAj3qKHnxlvXFeD3lN4jHgwu2jvj6EVDbCPYy/AbPSyrVnoRvqyKTS+fTXsdomBz/9EP2hRwymRDKJnn1ynYq9S28t4CdTej2GQqtEP29go2aTGhNt0FX Athira Windows
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/.ssh
+$ ^C
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/.ssh
+$ git clone https://github.com/cybersquare/react-test
+Cloning into 'react-test'...
+warning: You appear to have cloned an empty repository.
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/.ssh
+$ cd
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~
+$ mkdir baabtra-react
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~
+$ cd baabtra-react
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react
+$ git clone git@github.com:amjdp/react-test.git
+Cloning into 'react-test'...
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 24 (delta 0), reused 24 (delta 0), pack-reused 0
+Receiving objects: 100% (24/24), 305.77 KiB | 269.00 KiB/s, done.
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react
+$ cd react-test
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ npm start
+
+> learn-react-app@0.1.0 start
+> react-scripts start
+
+'react-scripts' is not recognized as an internal or external command,
+operable program or batch file.
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ npm install
+npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. Seeeloper.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+
+added 1464 packages, and audited 1465 packages in 43s
+
+225 packages are looking for funding
+  run `npm fund` for details
+
+6 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git remote -v
+origin  git@github.com:amjdp/react-test.git (fetch)
+origin  git@github.com:amjdp/react-test.git (push)
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git remote add live-origin git@github.com:cybersquare/react-test.git
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git remote -v
+live-origin     git@github.com:cybersquare/react-test.git (fetch)
+live-origin     git@github.com:cybersquare/react-test.git (push)
+origin  git@github.com:amjdp/react-test.git (fetch)
+origin  git@github.com:amjdp/react-test.git (push)
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git fetch --all
+Fetching origin
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+Fetching live-origin
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+From github.com:cybersquare/react-test
+ * [new branch]      master     -> live-origin/master
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git diff origin/master live-origin/master
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ code .
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/App.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git diff origin/master live-origin/master
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git diff src/App.js
+diff --git a/src/App.js b/src/App.js
+index 9e4e5cc..0a0b67d 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -3,7 +3,7 @@ import './App.css';
+ import CyberSquare from './CyberSuqre';
+ import Search from './Search';
+
+-const content = "Cybersquare professional";
++const content = "Cyber   square professional";
+
+ const obj ={"title":"Cybersquare", "name":"monish"};
+ const list1=["monish", "athira", "lekha"]
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git add src/App.js
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   src/App.js
+
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git commit src/App.js -m "content spacing"
+[master fa43b58] content spacing
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git push origin master
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 345 bytes | 115.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:amjdp/react-test.git
+   34ddada..fa43b58  master -> master
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ git pull live-origin master
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 629 bytes | 57.00 KiB/s, done.
+From github.com:cybersquare/react-test
+ * branch            master     -> FETCH_HEAD
+   34ddada..80f5be1  master     -> live-origin/master
+Updating fa43b58..80f5be1
+Fast-forward
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$ ^Ct
+
+ATHIRA M J@DESKTOP-N271D42 MINGW64 ~/baabtra-react/react-test (master)
+$

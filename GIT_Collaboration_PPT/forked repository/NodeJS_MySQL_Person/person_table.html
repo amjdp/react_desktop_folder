@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+
+    <style>
+        .user-detail{
+            text-align : center;
+            font-family: arial;
+            font-size: 20px;
+        }
+        button{
+            height: 40px;
+            width: 150px;
+            font-size: 20px;
+        }
+        table, th, td{
+            border: 1px solid black;
+
+        }
+        input{
+            height: 40px;
+            width: 240px;
+        }
+    </style>
+
+
+</head>
+<body>
+   
+    <!--====form section start====-->
+    <div class="user-detail">
+        <h1 id="heading">Create User Data</h1>
+        <form method="POST">
+
+            <table>
+
+                <tr>
+                    <td colspan="2">User Details</td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td colspan="2"><input type="text" placeholder="Enter your First Name" name="fname" required> <br><br></td>
+                </tr>
+
+                <tr>
+                    <td>Last Name</td>
+                    <td colspan="2"><input type="text" placeholder="Enter your Last Name" name="lname" required> <br><br></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="gender" value="Male" required> Male</td>
+                    <td><input type="radio" name="gender" value="Female" required> Female <br><br></td>  
+                </tr>
+
+                <tr>
+                    <td>Age</td>
+                    <td colspan="2"><input type="number" placeholder="Enter your Age" name="age" required> <br><br></td>
+                </tr>
+
+                <tr>
+                    <td>District</td>
+                    <td colspan="2">
+                        <select required>
+                            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                            <option value="Kollam">Kollam</option>
+                            <option value="Pathanamthitta">Pathanamthitta</option>
+                            <option value="Alappuzha">Alappuzha</option>
+                            <option value="Kottayam">Kottayam</option>
+                            <option value="Idukki">Idukki</option>
+                            <option value="Ernakulam">Ernakulam</option>
+                            <option value="Thrissur">Thrissur</option>
+                            <option value="Palakkad">Palakkad</option>
+                            <option value="Malappuram">Malappuram</option>
+                            <option value="Kozhikode">Kozhikode</option>
+                            <option value="Wayanad">Wayanad</option>
+                            <option value="Kannur">Kannur</option>
+                            <option value="Kasargod">Kasargod</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">Contact Number</td>
+                    <td colspan="2"><input type="number" placeholder="Enter Contact Number" name="contactNo" required> <br><br><br></td>
+                </tr>
+
+                <tr>
+                    <td>Submit</td>
+                    <td>View</td>
+                </tr>
+
+            </table>
+
+
+
+
+              <!-- <label>First Name : </label>
+              <input type="text" placeholder="Enter your First Name" name="fname" required> <br><br>
+              <label>Last Name : </label>
+              <input type="text" placeholder="Enter your Last Name" name="lname" required> <br><br>
+              <label>Gender : </label>
+              <input type="radio" name="gender" value="Male" required> 
+              <input type="radio" name="gender" value="Female" required> <br><br>
+              <label>Age : </label>
+              <input type="number" placeholder="Enter your Age" name="age" required> <br><br>
+
+              <label>District : </label>
+                                    <select required>
+                                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                                        <option value="Kollam">Kollam</option>
+                                        <option value="Pathanamthitta">Pathanamthitta</option>
+                                        <option value="Alappuzha">Alappuzha</option>
+                                        <option value="Kottayam">Kottayam</option>
+                                        <option value="Idukki">Idukki</option>
+                                        <option value="Ernakulam">Ernakulam</option>
+                                        <option value="Thrissur">Thrissur</option>
+                                        <option value="Palakkad">Palakkad</option>
+                                        <option value="Malappuram">Malappuram</option>
+                                        <option value="Kozhikode">Kozhikode</option>
+                                        <option value="Wayanad">Wayanad</option>
+                                        <option value="Kannur">Kannur</option>
+                                        <option value="Kasargod">Kasargod</option>
+                                    </select>
+
+
+              <label>Contact Number : </label>
+              <input type="number" placeholder="Enter Contact Number" name="contactNo" required> <br><br><br>
+
+              <button type="submit">Submit</button> <br><br><br>
+
+              <span id="update_msg"></span>  <button type="button">View</button> -->
+
+    </div>
+    <!--====form section start====-->
+ 
+</body>
+</html>

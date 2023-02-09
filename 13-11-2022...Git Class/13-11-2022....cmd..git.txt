@@ -1,0 +1,743 @@
+Microsoft Windows [Version 10.0.22000.1219]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\learn>code .
+
+D:\learn>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\learn>dir
+ Volume in drive D is DATA
+ Volume Serial Number is C42D-9FE4
+
+ Directory of D:\learn
+
+05-11-2022  22:06    <DIR>          .
+12-11-2022  17:12    <DIR>          learn-react
+               0 File(s)              0 bytes
+               2 Dir(s)  232,413,937,664 bytes free
+
+D:\learn>mkdir test
+
+D:\learn>cd test
+
+D:\learn\test>code .
+
+D:\learn\test>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+D:\learn\test>git init
+Initialized empty Git repository in D:/learn/test/.git/
+
+D:\learn\test>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sample.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\learn\test>git init --initial-branch=main
+Initialized empty Git repository in D:/learn/test/.git/
+
+D:\learn\test>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sample.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\learn\test>git remote add origin git@bitbucket.org:athiramj/react_demo.git
+
+D:\learn\test>git remote -v
+origin  git@bitbucket.org:athiramj/react_demo.git (fetch)
+origin  git@bitbucket.org:athiramj/react_demo.git (push)
+
+D:\learn\test>git pull origin main
+The authenticity of host 'bitbucket.org (104.192.141.1)' can't be established.
+RSA key fingerprint is SHA256:zzXQOXSRBEiUtuE8AikJYKwbHaxvSc0ojez9YXaGp1A.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'bitbucket.org' (RSA) to the list of known hosts.
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.70 KiB | 62.00 KiB/s, done.
+From bitbucket.org:athiramj/react_demo
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+
+D:\learn\test>git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sample.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\learn\test>git add sample.html
+
+D:\learn\test>git commit -m "sample file"
+[main 7a12457] sample file
+ 1 file changed, 15 insertions(+)
+ create mode 100644 sample.html
+
+D:\learn\test>git push origin main
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 562 bytes | 140.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To bitbucket.org:athiramj/react_demo.git
+   36c74df..7a12457  main -> main
+
+D:\learn\test>git branch athira
+
+D:\learn\test>git switch athira
+Switched to branch 'athira'
+
+D:\learn\test>git status
+On branch athira
+nothing to commit, working tree clean
+
+D:\learn\test>git branch --all
+* athira
+  main
+  remotes/origin/main
+
+D:\learn\test>git log --graph
+* commit 7a124572e9d56cd2768343334b0cae8442d4e977 (HEAD -> athira, origin/main, main)
+| Author: amjdp <athiramj123@gmail.com>
+| Date:   Sun Nov 13 17:35:52 2022 +0530
+|
+|     sample file
+|
+* commit 36c74df1a416203b0929136f77f144926f9dcdfe
+  Author: Athira K <athira@baabte.com>
+  Date:   Sun Nov 13 11:52:03 2022 +0000
+
+      Initial commit
+
+D:\learn\test>git checkout -b monish
+Switched to a new branch 'monish'
+
+D:\learn\test>git push origin monish,athira
+error: src refspec monish,athira does not match any
+error: failed to push some refs to 'bitbucket.org:athiramj/react_demo.git'
+
+D:\learn\test>git push origin monish
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+
+D:\learn\test>git push origin monish athira
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To bitbucket.org:athiramj/react_demo.git
+ * [new branch]      monish -> monish
+ * [new branch]      athira -> athira
+
+D:\learn\test>git log --graph --all
+* commit 7a124572e9d56cd2768343334b0cae8442d4e977 (HEAD -> monish, origin/monish, origin/main, origin/athira, main, athira)
+| Author: amjdp <athiramj123@gmail.com>
+| Date:   Sun Nov 13 17:35:52 2022 +0530
+|
+|     sample file
+|
+* commit 36c74df1a416203b0929136f77f144926f9dcdfe
+  Author: Athira K <athira@baabte.com>
+  Date:   Sun Nov 13 11:52:03 2022 +0000
+
+      Initial commit
+
+D:\learn\test>git checkout -b feature/login
+Switched to a new branch 'feature/login'
+
+D:\learn\test>git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+D:\learn\test>git status
+On branch feature/login
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git stash
+Saved working directory and index state WIP on feature/login: 7a12457 sample file
+
+D:\learn\test>git status
+On branch feature/login
+nothing to commit, working tree clean
+
+D:\learn\test>git stash pop
+On branch feature/login
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (6947e64abb69a78aeb0e565d2c59632ce04ad7ac)
+
+D:\learn\test>git branch -d athira
+Deleted branch athira (was 7a12457).
+
+D:\learn\test>git branch dev
+
+D:\learn\test>git branch qa
+
+D:\learn\test>git checkout dev
+Switched to branch 'dev'
+M       sample.html
+
+D:\learn\test>git branch feature/home
+
+D:\learn\test>git status
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git commit -m "home branch"
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git commit sample.html -m "Fix: hello world"
+[dev 19e9877] Fix: hello world
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+D:\learn\test>git status
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        smple1.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git add smple1.html
+
+D:\learn\test>git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   smple1.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+
+D:\learn\test>git commit -a
+Aborting commit due to empty commit message.
+
+D:\learn\test>git commit -a
+[dev 73402fc] new file added
+ 2 files changed, 16 insertions(+)
+ create mode 100644 smple1.html
+
+D:\learn\test>git push
+fatal: The current branch dev has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+D:\learn\test>git branch
+* dev
+  feature/home
+  feature/login
+  main
+  monish
+  qa
+
+D:\learn\test>git push origin dev
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 807 bytes | 403.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create pull request for dev:
+remote:   https://bitbucket.org/athiramj/react_demo/pull-requests/new?source=dev&t=1
+remote:
+To bitbucket.org:athiramj/react_demo.git
+ * [new branch]      dev -> dev
+
+D:\learn\test>git checkout feature/home
+Switched to branch 'feature/home'
+
+D:\learn\test>git merge dev
+Updating 7a12457..73402fc
+Fast-forward
+ sample.html |  6 ++++--
+ smple1.html | 14 ++++++++++++++
+ 2 files changed, 18 insertions(+), 2 deletions(-)
+ create mode 100644 smple1.html
+
+D:\learn\test>git log --graph --all
+* commit 73402fc55df0085ec5e02e2122a93102cbbd91d0 (HEAD -> feature/home, origin/dev, dev)
+| Author: amjdp <athiramj123@gmail.com>
+| Date:   Sun Nov 13 17:58:21 2022 +0530
+|
+|     new file added
+|
+* commit 19e98771449f903b7be83179a419ad2bb1a94050
+| Author: amjdp <athiramj123@gmail.com>
+| Date:   Sun Nov 13 17:54:52 2022 +0530
+|
+|     Fix: hello world
+|
+* commit 7a124572e9d56cd2768343334b0cae8442d4e977 (origin/monish, origin/main, origin/athira, qa, monish, main, feature/login)
+| Author: amjdp <athiramj123@gmail.com>
+| Date:   Sun Nov 13 17:35:52 2022 +0530
+|
+|     sample file
+|
+* commit 36c74df1a416203b0929136f77f144926f9dcdfe
+  Author: Athira K <athira@baabte.com>
+  Date:   Sun Nov 13 11:52:03 2022 +0000
+
+      Initial commit
+
+D:\learn\test>git push origin athira
+error: src refspec athira does not match any
+error: failed to push some refs to 'bitbucket.org:athiramj/react_demo.git'
+
+D:\learn\test>git log --oneline
+73402fc (HEAD -> feature/home, origin/dev, dev) new file added
+19e9877 Fix: hello world
+7a12457 (origin/monish, origin/main, origin/athira, qa, monish, main, feature/login) sample file
+36c74df Initial commit
+
+D:\learn\test>git log --oneline --all --graph
+* 73402fc (HEAD -> feature/home, origin/dev, dev) new file added
+* 19e9877 Fix: hello world
+* 7a12457 (origin/monish, origin/main, origin/athira, qa, monish, main, feature/login) sample file
+* 36c74df Initial commit
+
+D:\learn\test>git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        sample.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+D:\learn\test>git status
+On branch feature/home
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git checkout -- .
+
+D:\learn\test>git status
+On branch feature/home
+nothing to commit, working tree clean
+
+D:\learn\test>git checkout main
+Switched to branch 'main'
+
+D:\learn\test>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git commit -am "fix: change in h1"
+[main f50c207] fix: change in h1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\learn\test>git pull origin main
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+From bitbucket.org:athiramj/react_demo
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+D:\learn\test>git branch
+  dev
+  feature/home
+  feature/login
+* main
+  monish
+  qa
+
+D:\learn\test>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git commit -am "fix : change in h1"
+[main ea1707e] fix : change in h1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\learn\test>git pull origin main
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 285 bytes | 25.00 KiB/s, done.
+From bitbucket.org:athiramj/react_demo
+ * branch            main       -> FETCH_HEAD
+   7a12457..01c2fd6  main       -> origin/main
+Auto-merging sample.html
+CONFLICT (content): Merge conflict in sample.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+D:\learn\test>git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git add sample.html
+
+D:\learn\test>git status
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   sample.html
+
+
+D:\learn\test>git commit -am "fix:merged conflict resolve"
+[main e748cac] fix:merged conflict resolve
+
+D:\learn\test>git push origin main
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 855 bytes | 285.00 KiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
+To bitbucket.org:athiramj/react_demo.git
+   01c2fd6..e748cac  main -> main
+
+D:\learn\test>git push origin main
+Enter passphrase for key '/c/Users/ATHIRA M J/.ssh/id_rsa':
+Everything up-to-date
+
+D:\learn\test>git diff main monish
+diff --git a/sample.html b/sample.html
+index 00c5fd3..d2cc7a9 100644
+--- a/sample.html
++++ b/sample.html
+@@ -7,12 +7,9 @@
+     <title>Document</title>
+   </head>
+   <body>
+-
+-    <h1>Hello world changed by monish</h1>
+-
++    <h1>Hello world</h1>
+     <p>
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, sint!
+     </p>
+-
+   </body>
+ </html>
+
+D:\learn\test>git diff
+
+D:\learn\test>git status
+On branch main
+nothing to commit, working tree clean
+
+D:\learn\test>git restore sample.html
+
+D:\learn\test>git status
+On branch main
+nothing to commit, working tree clean
+
+D:\learn\test>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git restore sample.html
+
+D:\learn\test>git status
+On branch main
+nothing to commit, working tree clean
+
+D:\learn\test>git rm sample.html
+rm 'sample.html'
+
+D:\learn\test>git reset --soft
+
+D:\learn\test>git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    sample.html
+
+
+D:\learn\test>git checkout -- .
+
+D:\learn\test>git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    sample.html
+
+
+D:\learn\test>git restore sample.html
+error: pathspec 'sample.html' did not match any file(s) known to git
+
+D:\learn\test>git restore --staged
+fatal: you must specify path(s) to restore
+
+D:\learn\test>git restore sample.html
+error: pathspec 'sample.html' did not match any file(s) known to git
+
+D:\learn\test>git restore --staged sample.html
+
+D:\learn\test>git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    sample.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\learn\test>git restore sample.html
+
+D:\learn\test>git status
+On branch main
+nothing to commit, working tree clean
+
+D:\learn\test>git log
+commit e748cac3e79e3124a5bf37de41c7e28a4059ccda (HEAD -> main, origin/main)
+Merge: ea1707e 01c2fd6
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:24:18 2022 +0530
+
+    fix:merged conflict resolve
+
+commit ea1707e307bb65ade518648190b3ddf65706195a
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:19:31 2022 +0530
+
+    fix : change in h1
+
+commit 01c2fd6752f1141f778d6543c2a69106986a212c
+Author: Apple <apple@Apples-MacBook-Air.local>
+Date:   Sun Nov 13 18:17:37 2022 +0530
+
+    Added heading
+
+commit f50c20700e29fdb05804e01f9c9e9d0d2b5b99e7
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:15:16 2022 +0530
+
+    fix: change in h1
+
+commit 7a124572e9d56cd2768343334b0cae8442d4e977 (origin/monish, origin/athira, qa, monish, feature/login)
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 17:35:52 2022 +0530
+
+    sample file
+
+
+D:\learn\test>git diff  ea1707e 01c2fd6
+diff --git a/sample.html b/sample.html
+index c6c9a46..798bc3d 100644
+--- a/sample.html
++++ b/sample.html
+@@ -7,7 +7,7 @@
+     <title>Document</title>
+   </head>
+   <body>
+-    <h1>    ...........     </h1>
++    <h1>Hello world changed by monish</h1>
+     <p>
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, sint!
+     </p>
+
+D:\learn\test>git log
+commit e748cac3e79e3124a5bf37de41c7e28a4059ccda (HEAD -> main, origin/main)
+Merge: ea1707e 01c2fd6
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:24:18 2022 +0530
+
+    fix:merged conflict resolve
+
+commit ea1707e307bb65ade518648190b3ddf65706195a
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:19:31 2022 +0530
+
+    fix : change in h1
+
+commit 01c2fd6752f1141f778d6543c2a69106986a212c
+Author: Apple <apple@Apples-MacBook-Air.local>
+Date:   Sun Nov 13 18:17:37 2022 +0530
+
+    Added heading
+
+commit f50c20700e29fdb05804e01f9c9e9d0d2b5b99e7
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:15:16 2022 +0530
+
+    fix: change in h1
+
+commit 7a124572e9d56cd2768343334b0cae8442d4e977 (origin/monish, origin/athira, qa, monish, feature/login)
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 17:35:52 2022 +0530
+
+    sample file
+
+
+D:\learn\test>git reset --soft e748cac3e79e3124a5bf37de41c7e28a4059ccda
+
+D:\learn\test>git status
+On branch main
+nothing to commit, working tree clean
+
+D:\learn\test>e748cac3e79e3124a5bf37de41c7e28a4059ccdaq
+'e748cac3e79e3124a5bf37de41c7e28a4059ccdaq' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\learn\test>git reset --soft ea1707e307bb65ade518648190b3ddf65706195a
+
+D:\learn\test>git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   sample.html
+
+
+D:\learn\test>git mv sample.html athira.html
+
+D:\learn\test>git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    sample.html -> athira.html
+
+
+D:\learn\test>git commit -am "fix: renamed file"
+[main f2d65e3] fix: renamed file
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ rename sample.html => athira.html (88%)
+
+D:\learn\test>git status
+On branch main
+nothing to commit, working tree clean
+
+D:\learn\test>git commit --amend -m "fix : new file name added"
+[main ff9d4b2] fix : new file name added
+ Date: Sun Nov 13 18:41:42 2022 +0530
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ rename sample.html => athira.html (88%)
+
+D:\learn\test>git log
+commit ff9d4b297339036d31a5a91a394836f9a7b26622 (HEAD -> main)
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:41:42 2022 +0530
+
+    fix : new file name added
+
+commit ea1707e307bb65ade518648190b3ddf65706195a
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:19:31 2022 +0530
+
+    fix : change in h1
+
+commit f50c20700e29fdb05804e01f9c9e9d0d2b5b99e7
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 18:15:16 2022 +0530
+
+    fix: change in h1
+
+commit 7a124572e9d56cd2768343334b0cae8442d4e977 (origin/monish, origin/athira, qa, monish, feature/login)
+Author: amjdp <athiramj123@gmail.com>
+Date:   Sun Nov 13 17:35:52 2022 +0530
+
+    sample file
+
+commit 36c74df1a416203b0929136f77f144926f9dcdfe
+Author: Athira K <athira@baabte.com>
+Date:   Sun Nov 13 11:52:03 2022 +0000
+
+    Initial commit
+
+D:\learn\test>git branch
+  dev
+  feature/home
+  feature/login
+* main
+  monish
+  qa
+
+D:\learn\test>git checkout monish
+Switched to branch 'monish'
+
+D:\learn\test>git branch -m monish monish_mohan
+
+D:\learn\test>git branch
+  dev
+  feature/home
+  feature/login
+  main
+* monish_mohan
+  qa
+
+D:\learn\test>

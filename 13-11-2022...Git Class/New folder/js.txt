@@ -1,0 +1,60 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS D:\React-Apps\react-routing-app> dir
+
+
+    Directory: D:\React-Apps\react-routing-app
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        27-11-2022     21:19                react-routing-app
+
+
+PS D:\React-Apps\react-routing-app> cd react-routing-app   
+PS D:\React-Apps\react-routing-app\react-routing-app> dir
+
+
+    Directory: D:\React-Apps\react-routing-app\react-routing-app
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        27-11-2022     21:19                build
+d-----        26-11-2022     19:08                node_modules
+d-----        26-11-2022     18:09                public
+d-----        26-11-2022     18:09                src
+-a----        26-11-2022     18:08            310 .gitignore
+-a----        26-11-2022     19:08        1337514 package-lock.json
+-a----        26-11-2022     19:08           1014 package.json
+-a----        26-11-2022     18:08           3359 README.md
+
+
+PS D:\React-Apps\react-routing-app\react-routing-app> npm start
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/material/Chip' in 'D:\React-Apps\react-routing-app\react-routing-app\src\components\comp2'
+Failed to compile.
+
+[eslint] 
+src\components\comp2\Comp2.js
+  Line 10:14:  'Chip' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src\components\comp3\Comp3.js
+Compiled with warnings.
+
+[eslint]
+src\components\comp3\Comp3.js
+  Line 8:11:  'isMobile' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+ecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS D:\React-Apps\react-routing-app\react-routing-app>
